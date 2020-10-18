@@ -2,3 +2,4 @@
 *.png
 *token.txt
 .idea
+media/*

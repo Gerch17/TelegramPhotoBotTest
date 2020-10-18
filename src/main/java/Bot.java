@@ -1,5 +1,4 @@
 import org.apache.commons.io.FileUtils;
-import org.checkerframework.checker.units.qual.C;
 import org.json.JSONObject;
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.TelegramBotsApi;
@@ -86,7 +85,7 @@ public class Bot extends TelegramLongPollingBot {
             ParsingFormat parse = new ParsingFormat(namePath);
             System.out.println(parse.parsing());
             if(parse.parsing().equals("jpg") || parse.parsing().equals("png") || parse.parsing().equals("WebM") || parse.parsing().equals("JPG") || parse.parsing().equals("PNG") || parse.parsing().equals("JPEG")) { // Проверка на расширение
-                FileUtils.copyURLToFile(new URL(newURL), new File("C:\\Users\\tambo\\IdeaProjects\\ru.Gecrh.PhotoBotTest\\src\\main\\java\\Here\\" + userName + format));
+                FileUtils.copyURLToFile(new URL(newURL), new File("media/" + userName + format));
                 sendMsg(message, "Твоя работа была сохранена! Спасибо за участие");
             } else
             {
